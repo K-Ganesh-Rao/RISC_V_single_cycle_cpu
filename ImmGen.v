@@ -18,7 +18,8 @@ always @(*)begin
 		7'b0000011 : ImmExt = {20{instruction[31]}} , instruction[31:20]}; 								 //Load type instruction  (lw)
 		7'b0100011 : ImmExt = {20{instruction[31]}} , instruction[31:25] , instruction[11:7]};	//Store type instruction	  (sw)
 		7'b1100011 : ImmExt = {19{instruction[31]}} , instruction[31] , instruction[30:25] , instruction[11:8] ,1'b0};	//Branch type instruction (beq)
-
+	endcase
+	
 end
 
 
