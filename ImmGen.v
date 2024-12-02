@@ -5,7 +5,7 @@ Date : 02/12/2024
 */
 
 //Immediate Generator
-
+// with sign extended bits
 module ImmGen(
 	input [6:0] opcode,
 	input [31:0] instruction,
