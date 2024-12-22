@@ -9,14 +9,16 @@ Date : 01/12/2024
 module Reg_file(
 	input clk,
 	input reset,
-	input RegrWrite,
+	input RegWrite,
 	input [4:0] Rs1,Rs2,Rd,
 	input [31:0] write_data,
-	output [31:0] readdata1 , read_data2
+	output [31:0]  read_data1 , read_data2  
 );
 
+ /// Reg_file( clk , reset , RegrWrite , Rs1,Rs2,Rd, write_data , readdata1 , read_data2 );
+
 reg [31:0] Registers[31:0];
-integer K;
+integer k;
 always@(posedge clk or posedge reset)
 begin
 	if(reset)
@@ -26,7 +28,7 @@ begin
 			end
 		end
 	else if(RegWrite)begin
-		Register[Rd] <= Write_data;
+		Registers[Rd] <= write_data;
 	end
 end
 

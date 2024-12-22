@@ -11,6 +11,8 @@ module PC_plus4(
 	output [31:0] NextoPC
 );
 
+ // PC_plus4(fromPC , NextoPC );
+
 assign NextoPC = 4 + fromPC;
 
 endmodule

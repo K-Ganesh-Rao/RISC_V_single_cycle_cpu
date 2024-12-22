@@ -10,8 +10,10 @@ module Instruction_Mem(
 	input clk,
 	input reset,
 	input [31:0] read_address,
-	output [31:0] instruction_out
+	output reg [31:0] instruction_out
 );
+
+// Instruction_Mem(clk,reset,read_address,instruction_out);
 
 reg [31:0] I_Mem [63:0];
 integer k;
